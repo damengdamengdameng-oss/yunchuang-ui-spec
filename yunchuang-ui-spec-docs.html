@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云创后台 UI 组件规范</title>
+  <link rel="stylesheet" href="./yunchuang-ui-spec-docs.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">云创后台 UI</div>
+      <nav class="nav" aria-label="章节目录">
+        <a class="nav-link is-active" href="#overview">概览</a>
+        <a class="nav-link" href="#color">色彩</a>
+        <a class="nav-link" href="#type">字体</a>
+        <a class="nav-link" href="#button">按钮</a>
+        <a class="nav-link" href="#table">表格</a>
+        <a class="nav-link" href="#tag">标签</a>
+        <a class="nav-link" href="#icon">图标</a>
+        <a class="nav-link" href="#dialog">弹框</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="overview" class="doc-section">
+        <h1>云创后台 UI 组件规范</h1>
+        <p class="lead">
+          页面结构采用文档站形式：左侧目录导航，右侧为对应规范内容。当前版本已经统一按钮、字体、表格、标签、图标和弹框，适合作为后台改版时的直接参照页。
+        </p>
+        <div class="meta-grid">
+          <div class="meta-card">
+            <div class="meta-label">标题层级</div>
+            <div class="meta-value">一级 / 二级 / 三级</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">按钮体系</div>
+            <div class="meta-value">蓝色 / 白色 / 渐变</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">标签体系</div>
+            <div class="meta-value">发布 / 未发布 / 中性</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">图标来源</div>
+            <div class="meta-value">后台原始 iconfont</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="color" class="doc-section">
+        <h2>色彩</h2>
+        <p class="section-desc">包含主色、辅助色、字体色、边框色、背景色，以及规范中使用到的全部左到右渐变色。</p>
+
+        <h3>基础色</h3>
+        <div class="swatch-grid">
+          <div class="swatch-card">
+            <div class="swatch" style="background:#165DFF;"></div>
+            <div class="swatch-name">主色</div>
+            <div class="swatch-code">#165DFF</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#3B82FF;"></div>
+            <div class="swatch-name">主色 Hover</div>
+            <div class="swatch-code">#3B82FF</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#0E4BD9;"></div>
+            <div class="swatch-name">主色 Active</div>
+            <div class="swatch-code">#0E4BD9</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#E8F3FF;"></div>
+            <div class="swatch-name">主色浅底</div>
+            <div class="swatch-code">#E8F3FF</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#22C55E;"></div>
+            <div class="swatch-name">成功色</div>
+            <div class="swatch-code">#22C55E</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#E6A23C;"></div>
+            <div class="swatch-name">警告色</div>
+            <div class="swatch-code">#E6A23C</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#F56C6C;"></div>
+            <div class="swatch-name">危险色</div>
+            <div class="swatch-code">#F56C6C</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#4D8DFF;"></div>
+            <div class="swatch-name">操作图标蓝</div>
+            <div class="swatch-code">#4D8DFF</div>
+          </div>
+        </div>
+
+        <h3>文字与边框色</h3>
+        <div class="swatch-grid compact">
+          <div class="swatch-card">
+            <div class="swatch" style="background:#333333;"></div>
+            <div class="swatch-name">正文主色</div>
+            <div class="swatch-code">#333333</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#666666;"></div>
+            <div class="swatch-name">辅助文字 1</div>
+            <div class="swatch-code">#666666</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#999999;"></div>
+            <div class="swatch-name">辅助文字 2</div>
+            <div class="swatch-code">#999999</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#C9CDD4;"></div>
+            <div class="swatch-name">禁用文字</div>
+            <div class="swatch-code">#C9CDD4</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#D9E1EC;"></div>
+            <div class="swatch-name">按钮边框</div>
+            <div class="swatch-code">#D9E1EC</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#E5E5E5;"></div>
+            <div class="swatch-name">表格分割线</div>
+            <div class="swatch-code">#E5E5E5</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#F5F5F5;"></div>
+            <div class="swatch-name">表头背景</div>
+            <div class="swatch-code">#F5F5F5</div>
+          </div>
+          <div class="swatch-card">
+            <div class="swatch" style="background:#FFFFFF; border:1px solid #E5E5E5;"></div>
+            <div class="swatch-name">容器背景</div>
+            <div class="swatch-code">#FFFFFF</div>
+          </div>
+        </div>
+
+        <h3>渐变色</h3>
+        <div class="gradient-grid">
+          <div class="gradient-card">
+            <div class="gradient-bar gradient-primary"></div>
+            <div class="gradient-name">标准主按钮渐变</div>
+            <div class="gradient-code">#3AA2FF → #004FCB</div>
+          </div>
+          <div class="gradient-card">
+            <div class="gradient-bar gradient-primary-hover"></div>
+            <div class="gradient-name">主按钮 Hover 渐变</div>
+            <div class="gradient-code">#57B1FF → #1D63DA</div>
+          </div>
+          <div class="gradient-card">
+            <div class="gradient-bar gradient-green"></div>
+            <div class="gradient-name">绿色渐变</div>
+            <div class="gradient-code">#3AD967 → #00A51E</div>
+          </div>
+          <div class="gradient-card">
+            <div class="gradient-bar gradient-orange"></div>
+            <div class="gradient-name">橙色渐变</div>
+            <div class="gradient-code">#FFAF30 → #D28200</div>
+          </div>
+          <div class="gradient-card">
+            <div class="gradient-bar gradient-red"></div>
+            <div class="gradient-name">红色渐变</div>
+            <div class="gradient-code">#FFA8A8 → #FF4D4D</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="type" class="doc-section">
+        <h2>字体</h2>
+        <p class="section-desc">字体层级只保留一级、二级、三级。默认不加粗，只有选中态加粗。下面直接用真实字号展示每一级的实际效果。</p>
+
+        <div class="font-grid">
+          <div class="font-card">
+            <div class="font-card-head">一级标题</div>
+            <div class="font-sample level-1">一级标题示例 / 16px</div>
+            <div class="font-sample level-1 is-active">一级标题选中态 / 16px Bold</div>
+            <div class="font-meta">字号 16px / 行高 24px / 默认 400 / 选中 600</div>
+            <div class="font-desc">用于页面一级导航、一级分组标题。</div>
+          </div>
+          <div class="font-card">
+            <div class="font-card-head">二级标题</div>
+            <div class="font-sample level-2">二级标题示例 / 14px</div>
+            <div class="font-sample level-2 is-active">二级标题选中态 / 14px Bold</div>
+            <div class="font-meta">字号 14px / 行高 22px / 默认 400 / 选中 600</div>
+            <div class="font-desc">用于模块标题、二级导航、卡片标题。</div>
+          </div>
+          <div class="font-card">
+            <div class="font-card-head">三级标题</div>
+            <div class="font-sample level-3">三级标题示例 / 12px</div>
+            <div class="font-sample level-3 is-active">三级标题选中态 / 12px Bold</div>
+            <div class="font-meta">字号 12px / 行高 20px / 默认 400 / 选中 600</div>
+            <div class="font-desc">用于辅助分组、小标题、次级说明。</div>
+          </div>
+          <div class="font-card">
+            <div class="font-card-head">正文</div>
+            <div class="font-sample body-text">正文内容示例，表格、表单、弹框正文统一使用 14px。</div>
+            <div class="font-meta">字号 14px / 行高 22px / 字重 400 / 颜色 #333333</div>
+            <div class="font-desc">用于表格内容、表单、普通说明文案。</div>
+          </div>
+          <div class="font-card">
+            <div class="font-card-head">辅助文字</div>
+            <div class="font-sample helper-text">辅助说明示例，用于次级信息、空态说明和补充文案。</div>
+            <div class="font-meta">字号 12px / 行高 20px / 字重 400 / 颜色 #666666 / #999999</div>
+            <div class="font-desc">用于表格补充信息、按钮注释、字段辅助说明。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="button" class="doc-section">
+        <h2>按钮</h2>
+        <p class="section-desc">按钮分蓝色按钮、白色按钮、渐变按钮三套。L 号蓝色按钮使用纯色；渐变主按钮以“创建教材”为标准按钮。</p>
+
+        <h3>蓝色按钮</h3>
+        <div class="spec-table">
+          <div class="spec-row header">
+            <div>型号</div>
+            <div>高度</div>
+            <div>内边距</div>
+            <div>字体大小</div>
+            <div>圆角</div>
+            <div>示例</div>
+          </div>
+          <div class="spec-row">
+            <div>L</div>
+            <div>48px</div>
+            <div>0 20px</div>
+            <div>16px</div>
+            <div>8px</div>
+            <div><button class="btn btn-blue btn-l">主要按钮</button></div>
+          </div>
+          <div class="spec-row">
+            <div>M</div>
+            <div>40px</div>
+            <div>0 16px</div>
+            <div>14px</div>
+            <div>6px</div>
+            <div><button class="btn btn-blue btn-m">主要操作</button></div>
+          </div>
+          <div class="spec-row">
+            <div>S</div>
+            <div>32px</div>
+            <div>0 12px</div>
+            <div>12px</div>
+            <div>4px</div>
+            <div><button class="btn btn-blue btn-s">主按钮</button></div>
+          </div>
+        </div>
+
+        <h3>白色按钮</h3>
+        <div class="spec-table">
+          <div class="spec-row header">
+            <div>型号</div>
+            <div>高度</div>
+            <div>内边距</div>
+            <div>字体大小</div>
+            <div>圆角</div>
+            <div>示例</div>
+          </div>
+          <div class="spec-row">
+            <div>L</div>
+            <div>48px</div>
+            <div>0 20px</div>
+            <div>16px</div>
+            <div>8px</div>
+            <div><button class="btn btn-white btn-l">取消</button></div>
+          </div>
+          <div class="spec-row">
+            <div>M</div>
+            <div>40px</div>
+            <div>0 16px</div>
+            <div>14px</div>
+            <div>6px</div>
+            <div><button class="btn btn-white btn-m">次操作</button></div>
+          </div>
+          <div class="spec-row">
+            <div>S</div>
+            <div>32px</div>
+            <div>0 12px</div>
+            <div>12px</div>
+            <div>4px</div>
+            <div><button class="btn btn-white btn-s">轻操作</button></div>
+          </div>
+        </div>
+
+        <h3>渐变按钮</h3>
+        <div class="spec-table">
+          <div class="spec-row header">
+            <div>型号</div>
+            <div>高度</div>
+            <div>内边距</div>
+            <div>字体大小</div>
+            <div>圆角</div>
+            <div>示例</div>
+          </div>
+          <div class="spec-row">
+            <div>L</div>
+            <div>48px</div>
+            <div>0 20px</div>
+            <div>16px</div>
+            <div>8px</div>
+            <div><button class="btn btn-gradient btn-l">+ 创建教材</button></div>
+          </div>
+          <div class="spec-row">
+            <div>M</div>
+            <div>40px</div>
+            <div>0 16px</div>
+            <div>14px</div>
+            <div>6px</div>
+            <div><button class="btn btn-gradient btn-m">渐变按钮</button></div>
+          </div>
+          <div class="spec-row">
+            <div>S</div>
+            <div>32px</div>
+            <div>0 12px</div>
+            <div>12px</div>
+            <div>4px</div>
+            <div><button class="btn btn-gradient btn-s">渐变</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="table" class="doc-section">
+        <h2>表格</h2>
+        <p class="section-desc">表格样式与云创原后台保持一致：浅灰表头、细分割线、正文不加粗、鼠标滑入某一行时显示淡淡反色。</p>
+        <div class="table-demo">
+          <table class="demo-table">
+            <thead>
+              <tr>
+                <th>用户名</th>
+                <th>手机号</th>
+                <th>邮箱</th>
+                <th>机构</th>
+                <th>部门/学院</th>
+                <th>角色</th>
+                <th>启用状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>tmp-test-3</td>
+                <td></td>
+                <td></td>
+                <td>高等教育出版社</td>
+                <td>项目研发1部</td>
+                <td>临时用户 <span class="table-caret">▾</span></td>
+                <td><button class="switch on" type="button" aria-pressed="true" aria-label="切换启用状态"></button></td>
+                <td class="action-cell">
+                  <button class="table-action-btn" type="button" title="编辑">
+                    <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M4 20h4.2l9.9-9.9-4.2-4.2L4 15.8V20Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+                      <path d="M12.8 6.8l4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                      <path d="M4 20h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                  <button class="table-action-btn" type="button" title="用户">
+                    <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.7"></path>
+                      <path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>田萌</td>
+                <td>15901158520</td>
+                <td>tianmeng1@hep.com.cn</td>
+                <td>高等教育出版社</td>
+                <td>内容集成运营中心</td>
+                <td>系统管理员 <span class="table-caret">▾</span></td>
+                <td><button class="switch on" type="button" aria-pressed="true" aria-label="切换启用状态"></button></td>
+                <td class="action-cell">
+                  <button class="table-action-btn" type="button" title="编辑">
+                    <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M4 20h4.2l9.9-9.9-4.2-4.2L4 15.8V20Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+                      <path d="M12.8 6.8l4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                      <path d="M4 20h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                  <button class="table-action-btn" type="button" title="用户">
+                    <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.7"></path>
+                      <path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="tag" class="doc-section">
+        <h2>标签</h2>
+        <p class="section-desc">标签用于状态表达。当前后台统一只保留一种最小号标签，字号固定为 12px，高度和圆角统一，按状态切换不同色系。</p>
+
+        <div class="tag-showcase">
+          <span class="status-tag status-tag--published">已发布</span>
+          <span class="status-tag status-tag--unpublished">未发布</span>
+          <span class="status-tag status-tag--unbound">未绑定</span>
+          <span class="status-tag status-tag--neutral">待审核</span>
+        </div>
+
+        <div class="spec-table">
+          <div class="spec-row header">
+            <div>类型</div>
+            <div>高度</div>
+            <div>圆角</div>
+            <div>字体大小</div>
+            <div>颜色</div>
+            <div>示例</div>
+          </div>
+          <div class="spec-row">
+            <div>已发布</div>
+            <div>32px</div>
+            <div>6px</div>
+            <div>12px</div>
+            <div>#7EC251</div>
+            <div><span class="status-tag status-tag--published">已发布</span></div>
+          </div>
+          <div class="spec-row">
+            <div>未发布</div>
+            <div>32px</div>
+            <div>6px</div>
+            <div>12px</div>
+            <div>#FF5E5E</div>
+            <div><span class="status-tag status-tag--unpublished">未发布</span></div>
+          </div>
+          <div class="spec-row">
+            <div>未绑定</div>
+            <div>32px</div>
+            <div>6px</div>
+            <div>12px</div>
+            <div>#F0A13A</div>
+            <div><span class="status-tag status-tag--unbound">未绑定</span></div>
+          </div>
+          <div class="spec-row">
+            <div>中性标签</div>
+            <div>32px</div>
+            <div>6px</div>
+            <div>12px</div>
+            <div>#666666</div>
+            <div><span class="status-tag status-tag--neutral">待审核</span></div>
+          </div>
+        </div>
+
+        <div class="note-card">
+          标签 Hover：边框色略增强，背景色轻微加深，不改变状态主语义色。
+        </div>
+      </section>
+
+      <section id="icon" class="doc-section">
+        <h2>图标</h2>
+        <p class="section-desc">表格操作栏标准样例统一采用“编辑”和“用户”两个图标。图标颜色统一为蓝色，鼠标划过时显示淡渐变反色背景。</p>
+
+        <h3>表格操作区原样示例</h3>
+        <div class="icon-action-strip">
+          <button class="table-action-btn" type="button" title="编辑">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 20h4.2l9.9-9.9-4.2-4.2L4 15.8V20Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"></path>
+              <path d="M12.8 6.8l4.2 4.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+              <path d="M4 20h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            </svg>
+          </button>
+          <button class="table-action-btn" type="button" title="用户">
+            <svg class="action-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.7"></path>
+              <path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+
+        <h3>完整图标清单</h3>
+        <div id="icon-full-grid" class="icon-origin-grid full"></div>
+      </section>
+
+      <section id="dialog" class="doc-section">
+        <h2>弹框</h2>
+        <p class="section-desc">弹框标题推荐 14px，正文 14px，底部按钮遵循本规范中的按钮尺寸。弹出框圆角统一为 6px；在无蒙版场景下，阴影统一使用 0px 8px 32px 0px rgba(0, 0, 0, 0.16)。</p>
+        <div class="dialog-demo">
+          <div class="dialog-box">
+            <div class="dialog-head">新建教材</div>
+            <div class="dialog-body">弹框标题使用 14px，正文使用 14px。底部主要按钮建议使用渐变 M，取消按钮使用白色 M。</div>
+            <div class="dialog-foot">
+              <button class="btn btn-white btn-m">取消</button>
+              <button class="btn btn-gradient btn-m">确认创建</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./site.iconfont.js"></script>
+  <script>
+    (function () {
+      const links = Array.from(document.querySelectorAll(".nav-link"));
+      const sections = links
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const fullIcons = [
+        { id: "hep-import", name: "导入", desc: "导入教材、数据、资源" },
+        { id: "hep-shaixuan", name: "筛选", desc: "筛选条件、筛选入口" },
+        { id: "hep-sousuo", name: "搜索", desc: "搜索入口" },
+        { id: "hep-quanping", name: "全屏", desc: "进入全屏" },
+        { id: "hep-tuichuquanping", name: "退出全屏", desc: "退出全屏" },
+        { id: "hep-zujian", name: "组件", desc: "组件、模块" },
+        { id: "hep-caidan5", name: "菜单", desc: "菜单入口" },
+        { id: "hep-line_delete", name: "删除", desc: "删除、移除" },
+        { id: "hep-bianji", name: "编辑", desc: "编辑、修改" },
+        { id: "hep-tupu", name: "图谱", desc: "知识图谱、关系图" },
+        { id: "hep-a-SAASMline_plus_circle", name: "加号圆形", desc: "新增、添加" },
+        { id: "hep-zhankaishouqi", name: "展开收起", desc: "折叠面板、侧栏" },
+        { id: "hep-zhankaishouqi1", name: "展开收起1", desc: "折叠面板备选" },
+        { src: "图标/上传pdf.svg", name: "上传 PDF", desc: "上传 PDF 文件" },
+        { src: "图标/发布.svg", name: "发布", desc: "发布内容、发布状态" },
+        { src: "图标/取消发布.svg", name: "取消发布", desc: "取消发布、撤回发布" },
+        { src: "图标/编辑元数据.svg", name: "编辑元数据", desc: "编辑元数据、维护信息" },
+        { src: "图标/预览.svg", name: "预览", desc: "内容预览、预览详情" }
+      ];
+
+      function iconMarkup(item) {
+        if (item.src) {
+          return '<img class="icon-origin-image" src="' + item.src + '" alt="' + item.name + '">';
+        }
+        return '<svg class="svgfont yc-icon" style="color:#333333"><use href="#' + item.id + '"></use></svg>';
+      }
+
+      function renderIcons(targetId, items) {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        target.innerHTML = items.map((item) => (
+          '<div class="icon-origin-card">' +
+            '<div class="icon-origin-preview">' + iconMarkup(item) + '</div>' +
+            '<div class="icon-origin-name">' + item.name + '</div>' +
+            '<div class="icon-origin-id">' + (item.id || item.src) + '</div>' +
+            '<div class="icon-origin-desc">' + item.desc + '</div>' +
+          '</div>'
+        )).join("");
+      }
+
+      function setActive(id) {
+        links.forEach((link) => {
+          const isCurrent = link.getAttribute("href") === "#" + id;
+          link.classList.toggle("is-active", isCurrent);
+          link.setAttribute("aria-current", isCurrent ? "true" : "false");
+        });
+      }
+
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+          const id = this.getAttribute("href").slice(1);
+          setActive(id);
+        });
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+          if (visible) {
+            setActive(visible.target.id);
+          }
+        },
+        {
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: [0.2, 0.35, 0.6]
+        }
+      );
+
+      document.querySelectorAll(".switch").forEach((switchBtn) => {
+        switchBtn.addEventListener("click", function () {
+          const isOn = this.classList.toggle("on");
+          this.setAttribute("aria-pressed", isOn ? "true" : "false");
+        });
+      });
+
+      sections.forEach((section) => observer.observe(section));
+      renderIcons("icon-full-grid", fullIcons);
+    })();
+  </script>
+</body>
+</html>
